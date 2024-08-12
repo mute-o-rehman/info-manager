@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Manager</title>
+    <link href="css/min/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Information Form</h2>
+
+      <div id="alert-container"></div>
+
+      <div class="card">
+        <div class="card-body">
+          <form id="userForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Enter first name"
+                    required
+                    pattern="[A-Za-z]+"
+                    title="First name can only contain letters (no spaces allowed)"
+                    data-error="First name can only contain letters (no spaces allowed)."
+                  />
+                  <div class="invalid-feedback" id="firstNameError"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Enter last name"
+                    required
+                    pattern="[A-Za-z]+"
+                    title="Last name can only contain letters (no spaces allowed)"
+                    data-error="Last name can only contain letters (no spaces allowed)."
+                  />
+                  <div class="invalid-feedback" id="lastNameError"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="dob">Date of Birth</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dob"
+                    required
+                    max=""
+                  />
+                  <div class="invalid-feedback" id="dobError"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="gender">Gender</label>
+                  <select class="form-control" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <div class="invalid-feedback" id="genderError"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                placeholder="Enter phone number"
+                required
+                pattern="[0-9]+"
+                title="Phone number can only contain numbers"
+                data-error="Phone number can only contain numbers."
+              />
+              <div class="invalid-feedback" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                placeholder="Enter address"
+                rows="3"
+                required
+              ></textarea>
+              <div class="invalid-feedback" id="addressError"></div>
+            </div>
+            <button type="button" class="btn btn-primary" id="saveBtn">
+              Save
+            </button>
+            <button type="button" class="btn btn-secondary" id="cancelBtn">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/min/jquery-3.5.1.min.js"></script>
+    <script src="js/min/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
